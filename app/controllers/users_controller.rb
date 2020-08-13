@@ -1,7 +1,5 @@
-# frozen_string_literal: true
-
 class UsersController < ApplicationController
-  def new 
+  def new
     @user = User.new
   end
 
@@ -11,7 +9,7 @@ class UsersController < ApplicationController
 
     if @user.save
       redirect_to new_user_path
-    else 
+    else
       render :new
     end
   end
@@ -25,14 +23,16 @@ class UsersController < ApplicationController
 
     if @user.update(user_params)
       redirect_to new_user_path
-    else 
+    else
       render :new
     end
 
   end
 
   private
-    def user_params
-      params.require(:user).permit(:username, :email, :password)
-    end
+
+  def user_params
+    params.require(:user).permit(:username, :email, :password)
+  end
+
 end
