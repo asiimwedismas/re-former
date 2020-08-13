@@ -15,6 +15,7 @@ To get a local copy of the repository please run the following commands on your 
 ```
 $ git clone git@github.com:asiimwedismas/re-former.git
 $ cd re-former
+$ git checkout forms
 $ bundle install
 $ yarn install --check-files
 ```
